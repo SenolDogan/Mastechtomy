@@ -1,4 +1,1 @@
 # Mastecthomy
-# KARL
-# MASTECHTOMY
-# Mastechtomy
