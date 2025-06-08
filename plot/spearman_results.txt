@@ -1,0 +1,86 @@
+Spearman Correlation Results:
+
+
+ Tumor Size (T) :
+
+	Spearman's rank correlation rho
+
+data:  x_values and data$Total
+S = 3021383, p-value = 5.544e-09
+alternative hypothesis: true rho is not equal to 0
+sample estimates:
+      rho 
+0.3285741 
+
+
+ Weight :
+
+	Spearman's rank correlation rho
+
+data:  x_values and data$Total
+S = 3123111, p-value = 2.936e-08
+alternative hypothesis: true rho is not equal to 0
+sample estimates:
+      rho 
+0.3128621 
+
+
+ pN :
+
+	Spearman's rank correlation rho
+
+data:  x_values and data$Total
+S = 963908, p-value = 4.467e-10
+alternative hypothesis: true rho is not equal to 0
+sample estimates:
+      rho 
+0.4098603 
+
+
+ N(X/x) :
+
+	Spearman's rank correlation rho
+
+data:  x_values and data$Total
+S = 919847, p-value = 1.67e-10
+alternative hypothesis: true rho is not equal to 0
+sample estimates:
+     rho 
+0.420746 
+
+
+ N(x/X) :
+
+	Spearman's rank correlation rho
+
+data:  x_values and data$Total
+S = 706733, p-value < 2.2e-16
+alternative hypothesis: true rho is not equal to 0
+sample estimates:
+      rho 
+0.5549499 
+
+
+ L :
+
+	Spearman's rank correlation rho
+
+data:  x_values and data$Total
+S = 2684813, p-value = 3.136e-06
+alternative hypothesis: true rho is not equal to 0
+sample estimates:
+      rho 
+0.2739745 
+
+
+ CRP :
+
+	Spearman's rank correlation rho
+
+data:  x_values and data$Total
+S = 8, p-value < 2.2e-16
+alternative hypothesis: true rho is not equal to 0
+sample estimates:
+rho 
+ -1 
+

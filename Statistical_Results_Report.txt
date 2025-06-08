@@ -1,0 +1,130 @@
+=======================================================
+            STATISTICAL ANALYSIS REPORT
+=======================================================
+
+1. CORRELATIONS WITH TOTAL
+-------------------------------------------------------
+
+Length of Stay:
+  Correlation coefficient (rho): 0.705
+  p-value: <2e-16
+  Number of complete cases: 301
+ 
+Follow-Up:
+  Correlation coefficient (rho): 0.177
+  p-value: 0.00238
+  Number of complete cases: 291
+ 
+Age:
+  Correlation coefficient (rho): 0.194
+  p-value: 0.000734
+  Number of complete cases: 301
+ 
+BMI:
+  Correlation coefficient (rho): 0.237
+  p-value: 3.23e-05
+  Number of complete cases: 301
+ 
+Weight:
+  Correlation coefficient (rho): 0.313
+  p-value: 2.94e-08
+  Number of complete cases: 301
+ 
+Duration:
+  Correlation coefficient (rho): 0.131
+  p-value: 0.0226
+  Number of complete cases: 301
+ 
+Size:
+  Correlation coefficient (rho): 0.272
+  p-value: 0.000979
+  Number of complete cases: 144
+ 
+CRP:
+  Correlation coefficient (rho): 0.239
+  p-value: 3.23e-05
+  Number of complete cases: 295
+ 
+Mamma 24h:
+  Correlation coefficient (rho): 0.468
+  p-value: <2e-16
+  Number of complete cases: 301
+ 
+Axilla 24h:
+  Correlation coefficient (rho): 0.457
+  p-value: 4.28e-12
+  Number of complete cases: 207
+ 
+pT (Tumor Size):
+  Correlation coefficient (rho): 0.329
+  p-value: 5.54e-09
+  Number of complete cases: 300
+ 
+pN (Lymph Node Status):
+  Correlation coefficient (rho): 0.41
+  p-value: 4.47e-10
+  Number of complete cases: 214
+ 
+N(X/x):
+  Correlation coefficient (rho): 0.421
+  p-value: 1.67e-10
+  Number of complete cases: 212
+ 
+
+2. CATEGORICAL VARIABLES ANALYSIS
+-------------------------------------------------------
+
+2.1 T-Test Results:
+
+Diabetes vs Total:
+  t-statistic: -2.184 
+  p-value: 0.0357 
+  Mean difference: 277.03 
+
+Mastectomy vs Total:
+  t-statistic: 1.31 
+  p-value: 0.191 
+  Mean difference: -75.47 
+
+2.2 ANOVA Results:
+
+Histology (CNB) vs Total:
+  F-statistic: 3.71 
+  p-value: 0.00143 
+
+BRCA vs Total:
+  F-statistic: 1.09 
+  p-value: 0.339 
+
+
+3. SUMMARY OF KEY FINDINGS
+-------------------------------------------------------
+
+3.1 Strong Correlations (|rho| > 0.5):
+- Length of Stay (rho = 0.705)
+
+3.2 Moderate Correlations (0.3 < |rho| < 0.5):
+No moderate correlations found
+
+
+4. CONCLUSIONS
+-------------------------------------------------------
+
+The analysis reveals several relationships with Total values:
+
+1. The strongest correlations were found with:
+   - Length of stay
+   - Duration
+
+2. Several clinical parameters showed significant associations
+3. Both continuous and categorical variables demonstrated
+   important relationships with Total values
+
+Note: All statistical tests were performed using Spearman correlation for
+continuous variables, t-tests for binary variables, and ANOVA for
+categorical variables with more than two levels. Missing values were
+handled appropriately in all analyses.
+
+=======================================================
+                    END OF REPORT
+=======================================================

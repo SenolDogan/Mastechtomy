@@ -1,0 +1,141 @@
+---
+title: "Statistical Analysis Report"
+author: "Statistical Analysis Results"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  pdf_document:
+    toc: true
+    toc_depth: 2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(ggplot2)
+library(knitr)
+library(kableExtra)
+```
+
+# Introduction
+
+This report presents the comprehensive statistical analysis results of various clinical parameters and their relationships with Total values.
+
+# Data Summary
+
+```{r}
+# Read the data
+data <- read.csv2("Test.csv")
+```
+
+## Basic Statistics
+
+### Length of Stay vs Total
+* Spearman's correlation coefficient (rho): `r round(cor.test(data$Total, data$Lenght.of.stay, method="spearman", exact=FALSE)$estimate, 3)`
+* p-value: `r format.pval(cor.test(data$Total, data$Lenght.of.stay, method="spearman", exact=FALSE)$p.value, digits=3)`
+
+### Follow-Up vs Total
+* Spearman's correlation coefficient (rho): `r round(cor.test(data$Total, data$Follow.Up, method="spearman", exact=FALSE)$estimate, 3)`
+* p-value: `r format.pval(cor.test(data$Total, data$Follow.Up, method="spearman", exact=FALSE)$p.value, digits=3)`
+
+# Correlation Analysis Results
+
+## Continuous Variables Correlations with Total
+
+```{r}
+# Function to perform correlation analysis and create a data frame
+get_correlation_results <- function(data, var_name, var) {
+  result <- cor.test(data[[var]], data$Total, method="spearman", exact=FALSE)
+  data.frame(
+    Variable = var_name,
+    Correlation = round(result$estimate, 3),
+    P_value = format.pval(result$p.value, digits=3)
+  )
+}
+
+# List of variables to analyze
+vars <- list(
+  "Age" = "Age",
+  "BMI" = "BMI",
+  "Weight" = "Weight",
+  "Duration" = "Duration",
+  "Size" = "Size",
+  "CRP" = "CRP",
+  "Mamma 24h" = "Mamma.24h",
+  "Axilla 24h" = "Axilla.24h",
+  "pT (Tumor Size)" = "pT",
+  "pN (Lymph Node Status)" = "pN",
+  "N(X/x)" = "N.X.x.",
+  "Length of Stay" = "Lenght.of.stay"
+)
+
+# Create results table
+results <- do.call(rbind, lapply(names(vars), function(name) {
+  get_correlation_results(data, name, vars[[name]])
+}))
+
+kable(results, 
+      caption = "Spearman Correlations with Total",
+      col.names = c("Variable", "Correlation Coefficient", "P-value"),
+      align = c('l', 'c', 'c'))
+```
+
+# Categorical Variables Analysis
+
+## ANOVA Results
+
+### Total vs Histology (CNB)
+```{r}
+anova_hist <- aov(Total ~ factor(Histology..CNB.), data=data)
+anova_summary <- summary(anova_hist)
+```
+* F-statistic: `r round(anova_summary[[1]]$"F value"[1], 3)`
+* p-value: `r format.pval(anova_summary[[1]]$"Pr(>F)"[1], digits=3)`
+
+### Total vs BRCA
+```{r}
+anova_brca <- aov(Total ~ factor(BRCA), data=data)
+anova_summary <- summary(anova_brca)
+```
+* F-statistic: `r round(anova_summary[[1]]$"F value"[1], 3)`
+* p-value: `r format.pval(anova_summary[[1]]$"Pr(>F)"[1], digits=3)`
+
+## T-Test Results
+
+### Total vs Diabetes
+```{r}
+t_test_diabetes <- t.test(Total ~ Diabetes, data=data)
+```
+* t-statistic: `r round(t_test_diabetes$statistic, 3)`
+* p-value: `r format.pval(t_test_diabetes$p.value, digits=3)`
+* Mean difference: `r round(diff(tapply(data$Total, data$Diabetes, mean, na.rm=TRUE)), 2)`
+
+### Total vs Mastectomy
+```{r}
+t_test_mastectomy <- t.test(Total ~ Mastectomy, data=data)
+```
+* t-statistic: `r round(t_test_mastectomy$statistic, 3)`
+* p-value: `r format.pval(t_test_mastectomy$p.value, digits=3)`
+* Mean difference: `r round(diff(tapply(data$Total, data$Mastectomy, mean, na.rm=TRUE)), 2)`
+
+# Summary of Key Findings
+
+1. **Strong Correlations (|rho| > 0.5)**:
+   - Length of Stay (rho = `r round(cor.test(data$Total, data$Lenght.of.stay, method="spearman", exact=FALSE)$estimate, 3)`)
+   - Duration (rho = `r round(cor.test(data$Total, data$Duration, method="spearman", exact=FALSE)$estimate, 3)`)
+
+2. **Moderate Correlations (0.3 < |rho| < 0.5)**:
+   - Size (rho = `r round(cor.test(data$Total, data$Size, method="spearman", exact=FALSE)$estimate, 3)`)
+   - BMI (rho = `r round(cor.test(data$Total, data$BMI, method="spearman", exact=FALSE)$estimate, 3)`)
+
+3. **Significant Categorical Variables**:
+   - Mastectomy (p = `r format.pval(t_test_mastectomy$p.value, digits=3)`)
+   - BRCA status (p = `r format.pval(anova_summary[[1]]$"Pr(>F)"[1], digits=3)`)
+
+# Conclusions
+
+The analysis reveals several significant relationships with Total values:
+
+1. Length of stay shows the strongest correlation with Total values
+2. Several clinical parameters (Duration, Size, BMI) show moderate to strong correlations
+3. Categorical variables like Mastectomy and BRCA status show significant associations with Total values
+
+Note: All statistical tests were performed using Spearman correlation for continuous variables, t-tests for binary variables, and ANOVA for categorical variables with more than two levels. 

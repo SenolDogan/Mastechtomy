@@ -1,0 +1,37 @@
+Section,Dependent Variable,Independent Variable,Test Type,p-value,Statistic
+Complication,Total,Follow-Up,Spearman,0.0024,0.177
+Complication,Total,Length of stay,Spearman,<0.001,0.705
+New Treatment,Total,Mamma 24h,Spearman,<0.001,0.468
+New Treatment,Total,Axilla 24h,Spearman,<0.001,0.457
+New Treatment,Total,Drainage (A),Spearman,<0.001,0.588
+New Treatment,Total,Drainage (M),Spearman,<0.001,0.684
+Inflammation theory,Total,CRP,Spearman,<0.001,0.24
+Inflammation theory,Total,Histology (CNB),ANOVA,0.0014,3.71 (F)
+Inflammation theory,Follow-Up,Histology (CNB),ANOVA,0.0026,3.45 (F)
+Inflammation theory,Total,Previous surgery,T-Test,0.0275,2.25 (t)
+Inflammation theory,Follow-Up,Previous surgery,T-Test,0.0144,-2.51 (t)
+Inflammation theory,Total,Hypertension,T-Test,<0.001,-3.52 (t)
+Inflammation theory,Total,Diabetes,T-Test,0.0357,-2.18 (t)
+Lymph theory,Total,N(X/x),Spearman,<0.001,0.421
+Lymph theory,Total (A),N(X/x),Spearman,<0.001,0.420
+Lymph theory,Total,N(x/X),Spearman,<0.001,0.555
+Lymph theory,Total (A),N(x/X),Spearman,<0.001,0.563
+Lymph theory,Total,pN,Spearman,<0.001,0.410
+Lymph theory,Total (A),pN,Spearman,<0.001,0.416
+Lymph theory,Total,L,Spearman,<0.001,0.274
+Lymph theory,Total (A),L,Spearman,<0.001,0.429
+Dead space,Total,Weight,Spearman,<0.001,0.31
+Dead space,Total,Axilla,ANOVA,<0.001,68.04 (F)
+Dead space,Total,Size,Spearman,0.0010,0.27
+Dead space,Total (A),Mastectomy,T-Test,0.0049,2.84 (t)
+Dead space,Total (M),Size,Spearman,0.0020,0.23
+BRCA,Total (M),BRCA,ANOVA,0.026,3.74 (F)
+BRCA,Total (A),BRCA,ANOVA,0.0034,5.92 (F)
+BRCA,Total,BRCA,ANOVA,0.339,1.09 (F)
+Epidemiological Data,Total,Age,Spearman,0.0007,0.194
+Epidemiological Data,Follow-Up,Age,Spearman,<0.001,0.502
+Epidemiological Data,Total,BMI,Spearman,<0.001,0.237
+Epidemiological Data,Follow-Up,BMI,Spearman,<0.001,0.213
+Clinical Characteristics,Total,pT,Spearman,<0.001,0.329
+Clinical Characteristics,Total (M),Duration,Spearman,<0.001,0.209
+Clinical Characteristics,Follow-Up,Duration,Spearman,<0.001,-0.320 

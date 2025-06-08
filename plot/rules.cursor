@@ -1,0 +1,186 @@
+# Biostatistical Analysis Rules for Cancer Patient Clinical DataB
+
+## 1. Data Preparation and Quality Control
+- Check for missing values and outliers in all variables
+- Verify data types (numeric, categorical, ordinal)
+- Ensure proper coding of categorical variables
+- Handle missing data appropriately (imputation or exclusion)
+- Standardize variable names and formats
+
+## 2. Descriptive Statistics
+### 2.1 Patient Demographics
+- Age distribution (mean, median, range, SD)
+- Gender distribution (frequencies, percentages)
+- BMI distribution (mean, median, range, SD)
+- Smoking status distribution
+
+### 2.2 Clinical Characteristics
+- Tumor characteristics:
+  * Size distribution
+  * Grade distribution
+  * Histology types
+  * Stage distribution
+- Biomarker status:
+  * ER/PR status
+  * HER2 status
+  * Ki67 levels
+- Treatment characteristics:
+  * Surgery types
+  * Chemotherapy regimens
+  * Radiation therapy
+
+### 2.3 Outcome Variables
+- Follow-up duration
+- Survival rates
+- Recurrence rates
+- Complication rates
+
+## 3. Inferential Statistics
+### 3.1 Correlation Analysis
+- Spearman correlation for non-normal data
+- Pearson correlation for normal data
+- Correlation matrix for multiple variables
+- Significance testing (p < 0.05)
+
+### 3.2 Group Comparisons
+- T-tests for continuous variables between two groups
+- ANOVA for continuous variables among multiple groups
+- Chi-square tests for categorical variables
+- Mann-Whitney U test for non-normal data
+- Kruskal-Wallis test for multiple groups
+
+### 3.3 Survival Analysis
+- Kaplan-Meier survival curves
+- Log-rank tests for survival differences
+- Cox proportional hazards regression
+- Hazard ratios and confidence intervals
+
+### 3.4 Multivariate Analysis
+- Multiple regression analysis
+- Logistic regression for binary outcomes
+- Cox regression for survival outcomes
+- Confounding variable adjustment
+
+## 4. Visualization Guidelines
+### 4.1 Basic Plots
+- Histograms for distribution
+- Box plots for group comparisons
+- Scatter plots for correlations
+- Bar charts for frequencies
+
+### 4.2 Advanced Plots
+- Survival curves
+- Forest plots for hazard ratios
+- Heat maps for correlation matrices
+- ROC curves for diagnostic accuracy
+
+## 5. Reporting Standards
+- Clear presentation of results
+- Appropriate use of tables and figures
+- Statistical significance reporting
+- Effect size reporting
+- Confidence intervals
+
+## 6. Statistical Software Requirements
+- R with required packages:
+  * tidyverse for data manipulation
+  * survival for survival analysis
+  * ggplot2 for visualization
+  * car for statistical tests
+  * writexl for Excel output
+
+## 7. Quality Assurance
+- Double-check all calculations
+- Verify statistical assumptions
+- Review for clinical relevance
+- Peer review of statistical methods
+
+## 8. Documentation
+- Document all data transformations
+- Record statistical methods used
+- Save all analysis scripts
+- Maintain analysis log
+
+## 9. Ethical Considerations
+- Patient privacy protection
+- Appropriate data anonymization
+- Compliance with institutional guidelines
+- Transparent reporting of results
+
+## 10. Output Files
+- Analysis results in Excel format
+- High-resolution plots in PNG format
+- Statistical reports in PDF format
+- R scripts for reproducibility
+
+# Cancer Mutation Data Analysis and Review Writing Guidelines
+
+## Data Analysis Rules
+
+1. Data Preprocessing
+   - Always verify data quality and completeness
+   - Document any missing values and their handling
+   - Normalize mutation frequencies when comparing across studies
+   - Use standardized mutation nomenclature (e.g., HGVS)
+
+2. Statistical Analysis
+   - Apply appropriate statistical tests based on data distribution
+   - Include confidence intervals for mutation frequencies
+   - Consider multiple testing corrections when applicable
+   - Document all statistical methods and software used
+
+3. Visualization
+   - Use clear and informative plots
+   - Include proper labels and legends
+   - Choose appropriate color schemes for mutation types
+   - Ensure accessibility of visualizations
+
+## Review Writing Guidelines
+
+1. Structure
+   - Abstract: Clear summary of key findings
+   - Introduction: Background and significance
+   - Methods: Detailed analysis approach
+   - Results: Comprehensive findings
+   - Discussion: Interpretation and implications
+   - Conclusion: Key takeaways and future directions
+
+2. Content Requirements
+   - Cite recent and relevant literature
+   - Include mutation frequency tables
+   - Discuss clinical implications
+   - Address limitations of the analysis
+   - Suggest future research directions
+
+3. Quality Standards
+   - Use clear and precise language
+   - Maintain scientific accuracy
+   - Include proper references
+   - Follow journal-specific formatting
+   - Ensure reproducibility of analysis
+
+4. Ethical Considerations
+   - Respect patient privacy
+   - Acknowledge data sources
+   - Disclose conflicts of interest
+   - Follow ethical guidelines for research
+
+## Technical Requirements
+
+1. Data Management
+   - Use version control for analysis scripts
+   - Document all data transformations
+   - Maintain backup copies of original data
+   - Follow FAIR data principles
+
+2. Software and Tools
+   - Use reproducible analysis pipelines
+   - Document software versions
+   - Include code comments
+   - Use standard bioinformatics tools
+
+3. Documentation
+   - Maintain detailed analysis logs
+   - Document all parameters used
+   - Include troubleshooting notes
+   - Keep track of analysis iterations 

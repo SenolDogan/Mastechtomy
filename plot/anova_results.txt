@@ -1,0 +1,23 @@
+ANOVA Results:
+
+
+ BRCA :
+             Df   Sum Sq Mean Sq F value Pr(>F)
+BRCA          1       82      82   0.001   0.98
+Residuals   138 17646249  127871               
+161 observations deleted due to missingness
+
+ Histology (CNB) :
+                 Df   Sum Sq Mean Sq F value   Pr(>F)    
+Histology..CNB.   1  4075497 4075497   16.72 5.58e-05 ***
+Residuals       299 72887915  243772                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Histology (P) :
+               Df   Sum Sq Mean Sq F value   Pr(>F)    
+Histology..P.   1  4833490 4833490   19.45 1.56e-05 ***
+Residuals     240 59638976  248496                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+59 observations deleted due to missingness

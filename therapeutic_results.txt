@@ -1,0 +1,26 @@
+Statistical Test Results:
+
+
+CTX (anova):
+             Df   Sum Sq Mean Sq F value Pr(>F)
+CTX           1   398088  398088   1.555  0.213
+Residuals   299 76565324  256071               
+
+Axilla (anova):
+             Df   Sum Sq Mean Sq F value Pr(>F)
+Axilla        1   460503  460503     1.8  0.181
+Residuals   299 76502909  255863               
+
+Mastectomy (t.test):
+
+	Welch Two Sample t-test
+
+data:  Total by Mastectomy
+t = 1.31, df = 276.47, p-value = 0.1913
+alternative hypothesis: true difference in means between group 1 and group 2 is not equal to 0
+95 percent confidence interval:
+ -37.93877 188.87626
+sample estimates:
+mean in group 1 mean in group 2 
+       742.2756        666.8069 
+

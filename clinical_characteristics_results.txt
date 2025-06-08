@@ -1,0 +1,44 @@
+Clinical Characteristics T-Test Results:
+
+
+ Hypertension :
+
+	Welch Two Sample t-test
+
+data:  Total by Hypertension
+t = -3.5243, df = 130.95, p-value = 0.0005854
+alternative hypothesis: true difference in means between group 0 and group 1 is not equal to 0
+95 percent confidence interval:
+ -396.2336 -111.3324
+sample estimates:
+mean in group 0 mean in group 1 
+        621.607         875.390 
+
+
+ Previous.surgery :
+
+	Welch Two Sample t-test
+
+data:  Total by Previous.surgery
+t = 2.2463, df = 77.663, p-value = 0.02752
+alternative hypothesis: true difference in means between group 0 and group 1 is not equal to 0
+95 percent confidence interval:
+  18.69201 310.19740
+sample estimates:
+mean in group 0 mean in group 1 
+       734.3293        569.8846 
+
+
+ Diabetes :
+
+	Welch Two Sample t-test
+
+data:  Total by Diabetes
+t = -2.1837, df = 35.51, p-value = 0.03567
+alternative hypothesis: true difference in means between group 0 and group 1 is not equal to 0
+95 percent confidence interval:
+ -534.43197  -19.62253
+sample estimates:
+mean in group 0 mean in group 1 
+       675.5485        952.5758 
+

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Biostatistical Analysis and Cancer Mutation Data Guidelines</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #7f8c8d;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        @media print {
+            body {
+                margin: 0;
+                padding: 20px;
+            }
+            h1 {
+                page-break-after: avoid;
+            }
+            h2 {
+                page-break-after: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Biostatistical Analysis and Cancer Mutation Data Guidelines</h1>
+    
+    <div class="section">
+        <h2>Biostatistical Analysis Rules for Cancer Patient Clinical Data</h2>
+        
+        <h3>1. Data Preparation and Quality Control</h3>
+        <ul>
+            <li>Check for missing values and outliers in all variables</li>
+            <li>Verify data types (numeric, categorical, ordinal)</li>
+            <li>Ensure proper coding of categorical variables</li>
+            <li>Handle missing data appropriately (imputation or exclusion)</li>
+            <li>Standardize variable names and formats</li>
+        </ul>
+
+        <h3>2. Descriptive Statistics</h3>
+        <h4>2.1 Patient Demographics</h4>
+        <ul>
+            <li>Age distribution (mean, median, range, SD)</li>
+            <li>Gender distribution (frequencies, percentages)</li>
+            <li>BMI distribution (mean, median, range, SD)</li>
+            <li>Smoking status distribution</li>
+        </ul>
+
+        <h4>2.2 Clinical Characteristics</h4>
+        <ul>
+            <li>Tumor characteristics:
+                <ul>
+                    <li>Size distribution</li>
+                    <li>Grade distribution</li>
+                    <li>Histology types</li>
+                    <li>Stage distribution</li>
+                </ul>
+            </li>
+            <li>Biomarker status:
+                <ul>
+                    <li>ER/PR status</li>
+                    <li>HER2 status</li>
+                    <li>Ki67 levels</li>
+                </ul>
+            </li>
+            <li>Treatment characteristics:
+                <ul>
+                    <li>Surgery types</li>
+                    <li>Chemotherapy regimens</li>
+                    <li>Radiation therapy</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>2.3 Outcome Variables</h4>
+        <ul>
+            <li>Follow-up duration</li>
+            <li>Survival rates</li>
+            <li>Recurrence rates</li>
+            <li>Complication rates</li>
+        </ul>
+
+        <h3>3. Inferential Statistics</h3>
+        <h4>3.1 Correlation Analysis</h4>
+        <ul>
+            <li>Spearman correlation for non-normal data</li>
+            <li>Pearson correlation for normal data</li>
+            <li>Correlation matrix for multiple variables</li>
+            <li>Significance testing (p < 0.05)</li>
+        </ul>
+
+        <h4>3.2 Group Comparisons</h4>
+        <ul>
+            <li>T-tests for continuous variables between two groups</li>
+            <li>ANOVA for continuous variables among multiple groups</li>
+            <li>Chi-square tests for categorical variables</li>
+            <li>Mann-Whitney U test for non-normal data</li>
+            <li>Kruskal-Wallis test for multiple groups</li>
+        </ul>
+
+        <h4>3.3 Survival Analysis</h4>
+        <ul>
+            <li>Kaplan-Meier survival curves</li>
+            <li>Log-rank tests for survival differences</li>
+            <li>Cox proportional hazards regression</li>
+            <li>Hazard ratios and confidence intervals</li>
+        </ul>
+
+        <h4>3.4 Multivariate Analysis</h4>
+        <ul>
+            <li>Multiple regression analysis</li>
+            <li>Logistic regression for binary outcomes</li>
+            <li>Cox regression for survival outcomes</li>
+            <li>Confounding variable adjustment</li>
+        </ul>
+
+        <h3>4. Visualization Guidelines</h3>
+        <h4>4.1 Basic Plots</h4>
+        <ul>
+            <li>Histograms for distribution</li>
+            <li>Box plots for group comparisons</li>
+            <li>Scatter plots for correlations</li>
+            <li>Bar charts for frequencies</li>
+        </ul>
+
+        <h4>4.2 Advanced Plots</h4>
+        <ul>
+            <li>Survival curves</li>
+            <li>Forest plots for hazard ratios</li>
+            <li>Heat maps for correlation matrices</li>
+            <li>ROC curves for diagnostic accuracy</li>
+        </ul>
+
+        <h3>5. Reporting Standards</h3>
+        <ul>
+            <li>Clear presentation of results</li>
+            <li>Appropriate use of tables and figures</li>
+            <li>Statistical significance reporting</li>
+            <li>Effect size reporting</li>
+            <li>Confidence intervals</li>
+        </ul>
+
+        <h3>6. Statistical Software Requirements</h3>
+        <ul>
+            <li>R with required packages:
+                <ul>
+                    <li>tidyverse for data manipulation</li>
+                    <li>survival for survival analysis</li>
+                    <li>ggplot2 for visualization</li>
+                    <li>car for statistical tests</li>
+                    <li>writexl for Excel output</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>7. Quality Assurance</h3>
+        <ul>
+            <li>Double-check all calculations</li>
+            <li>Verify statistical assumptions</li>
+            <li>Review for clinical relevance</li>
+            <li>Peer review of statistical methods</li>
+        </ul>
+
+        <h3>8. Documentation</h3>
+        <ul>
+            <li>Document all data transformations</li>
+            <li>Record statistical methods used</li>
+            <li>Save all analysis scripts</li>
+            <li>Maintain analysis log</li>
+        </ul>
+
+        <h3>9. Ethical Considerations</h3>
+        <ul>
+            <li>Patient privacy protection</li>
+            <li>Appropriate data anonymization</li>
+            <li>Compliance with institutional guidelines</li>
+            <li>Transparent reporting of results</li>
+        </ul>
+
+        <h3>10. Output Files</h3>
+        <ul>
+            <li>Analysis results in Excel format</li>
+            <li>High-resolution plots in PNG format</li>
+            <li>Statistical reports in PDF format</li>
+            <li>R scripts for reproducibility</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Cancer Mutation Data Analysis and Review Writing Guidelines</h2>
+
+        <h3>Data Analysis Rules</h3>
+        <h4>1. Data Preprocessing</h4>
+        <ul>
+            <li>Always verify data quality and completeness</li>
+            <li>Document any missing values and their handling</li>
+            <li>Normalize mutation frequencies when comparing across studies</li>
+            <li>Use standardized mutation nomenclature (e.g., HGVS)</li>
+        </ul>
+
+        <h4>2. Statistical Analysis</h4>
+        <ul>
+            <li>Apply appropriate statistical tests based on data distribution</li>
+            <li>Include confidence intervals for mutation frequencies</li>
+            <li>Consider multiple testing corrections when applicable</li>
+            <li>Document all statistical methods and software used</li>
+        </ul>
+
+        <h4>3. Visualization</h4>
+        <ul>
+            <li>Use clear and informative plots</li>
+            <li>Include proper labels and legends</li>
+            <li>Choose appropriate color schemes for mutation types</li>
+            <li>Ensure accessibility of visualizations</li>
+        </ul>
+
+        <h3>Review Writing Guidelines</h3>
+        <h4>1. Structure</h4>
+        <ul>
+            <li>Abstract: Clear summary of key findings</li>
+            <li>Introduction: Background and significance</li>
+            <li>Methods: Detailed analysis approach</li>
+            <li>Results: Comprehensive findings</li>
+            <li>Discussion: Interpretation and implications</li>
+            <li>Conclusion: Key takeaways and future directions</li>
+        </ul>
+
+        <h4>2. Content Requirements</h4>
+        <ul>
+            <li>Cite recent and relevant literature</li>
+            <li>Include mutation frequency tables</li>
+            <li>Discuss clinical implications</li>
+            <li>Address limitations of the analysis</li>
+            <li>Suggest future research directions</li>
+        </ul>
+
+        <h4>3. Quality Standards</h4>
+        <ul>
+            <li>Use clear and precise language</li>
+            <li>Maintain scientific accuracy</li>
+            <li>Include proper references</li>
+            <li>Follow journal-specific formatting</li>
+            <li>Ensure reproducibility of analysis</li>
+        </ul>
+
+        <h4>4. Ethical Considerations</h4>
+        <ul>
+            <li>Respect patient privacy</li>
+            <li>Acknowledge data sources</li>
+            <li>Disclose conflicts of interest</li>
+            <li>Follow ethical guidelines for research</li>
+        </ul>
+
+        <h3>Technical Requirements</h3>
+        <h4>1. Data Management</h4>
+        <ul>
+            <li>Use version control for analysis scripts</li>
+            <li>Document all data transformations</li>
+            <li>Maintain backup copies of original data</li>
+            <li>Follow FAIR data principles</li>
+        </ul>
+
+        <h4>2. Software and Tools</h4>
+        <ul>
+            <li>Use reproducible analysis pipelines</li>
+            <li>Document software versions</li>
+            <li>Include code comments</li>
+            <li>Use standard bioinformatics tools</li>
+        </ul>
+
+        <h4>3. Documentation</h4>
+        <ul>
+            <li>Maintain detailed analysis logs</li>
+            <li>Document all parameters used</li>
+            <li>Include troubleshooting notes</li>
+            <li>Keep track of analysis iterations</li>
+        </ul>
+    </div>
+</body>
+</html> 

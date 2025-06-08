@@ -1,0 +1,98 @@
+Therapeutic Factors - Spearman Correlation Results:
+
+
+ Duration :
+
+	Spearman's rank correlation rho
+
+data:  data[[x_var]] and data$Total
+S = 3947830, p-value = 0.02259
+alternative hypothesis: true rho is not equal to 0
+sample estimates:
+      rho 
+0.1314097 
+
+
+ Size :
+
+	Spearman's rank correlation rho
+
+data:  data[[x_var]] and data$Total
+S = 362337, p-value = 0.0009788
+alternative hypothesis: true rho is not equal to 0
+sample estimates:
+      rho 
+0.2718892 
+
+
+ Mamma 24h :
+
+	Spearman's rank correlation rho
+
+data:  data[[x_var]] and data$Total
+S = 2416831, p-value < 2.2e-16
+alternative hypothesis: true rho is not equal to 0
+sample estimates:
+      rho 
+0.4682557 
+
+
+ Axilla 24h :
+
+	Spearman's rank correlation rho
+
+data:  data[[x_var]] and data$Total
+S = 802168, p-value = 4.276e-12
+alternative hypothesis: true rho is not equal to 0
+sample estimates:
+     rho 
+0.457355 
+
+
+ Drainage (M) :
+
+	Spearman's rank correlation rho
+
+data:  data[[x_var]] and data$Total
+S = 1435546, p-value < 2.2e-16
+alternative hypothesis: true rho is not equal to 0
+sample estimates:
+      rho 
+0.6841552 
+
+
+ Drainage (A) :
+
+	Spearman's rank correlation rho
+
+data:  data[[x_var]] and data$Total
+S = 609522, p-value < 2.2e-16
+alternative hypothesis: true rho is not equal to 0
+sample estimates:
+      rho 
+0.5876752 
+
+
+ Follow-Up :
+
+	Spearman's rank correlation rho
+
+data:  data[[x_var]] and data$Total
+S = 3378253, p-value = 0.002382
+alternative hypothesis: true rho is not equal to 0
+sample estimates:
+      rho 
+0.1774362 
+
+
+ Length of stay :
+
+	Spearman's rank correlation rho
+
+data:  data[[x_var]] and data$Total
+S = 1341876, p-value < 2.2e-16
+alternative hypothesis: true rho is not equal to 0
+sample estimates:
+      rho 
+0.7047642 
+
